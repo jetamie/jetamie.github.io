@@ -115,22 +115,24 @@
             return false
         }
     </script>
-    <title>GitHub 文件加速</title>
+    <title>文件下载代理加速-Cloudflare</title>
 </head>
 <body class="flex">
-<h1 style="margin-bottom: 50px">GitHub 文件加速</h1>
+<h1 style="margin-bottom: 50px">文件下载代理加速-Cloudflare</h1>
 <form action="" method="get" style="padding-bottom: 40px" target="_blank" class="flex" onsubmit="toSubmit(event)">
     <label class="block" style="width: fit-content">
-        <input class="block url" name="q" type="text" placeholder="键入Github文件链接" pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required="">
+        <!-- <input class="block url" name="q" type="text" placeholder="键入Github文件链接" pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required=""> -->
+        <input class="block url" name="q" type="text" placeholder="键入需要加速的文件链接" required="">
         <div class="bar"></div>
     </label>
     <input class="block btn" type="submit" value="下载">
     <div class="tips">
-        <p>GitHub文件链接带不带协议头都可以，支持release、archive以及文件，右键复制出来的链接都是符合标准的，更多用法、clone加速请参考<a href="https://hunsh.net/archives/23/">这篇文章</a>。</p>
-        <p>release、archive使用cf加速，文件会跳转至JsDelivr</p>
-        <p>注意，不支持项目文件夹</p></div>
+        <p>GitHub文件链接带不带协议头都可以，支持release、archive以及文件，右键复制出来的链接都是符合标准的</p>
+        <p>release、archive使用cf加速，文件会跳转至JsDelivr，注意，不支持项目文件夹</p>
+        <p>支持huggingface等模型代理下载</p>
+    </div>
 </form>
-<p style="position: sticky;top: calc(100% - 2.5em);">项目基于Cloudflare Workers，页面来自GitHub <a style="color: #3294ea" href="https://github.com/hunshcn/gh-proxy">hunshcn/gh-proxy</a>
+<p style="position: sticky;top: calc(100% - 2.5em);">加速服务Cloudflare Workers，展示页面 <a style="color: #3294ea" href="https://github.com/hunshcn/gh-proxy">hunshcn/gh-proxy</a>
 </p>
 
 
